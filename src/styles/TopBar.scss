@@ -1,0 +1,112 @@
+.bar {
+    position: fixed;
+    height: 45px;
+    width: 100%;
+    z-index: 1;
+    background-color: #6F93FA;
+    box-shadow: 0 3px 10px #1A233B;
+    transition: 0.3s;
+
+    @media screen and (min-width: 768px) {
+        height: 60px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        position: absolute;
+        min-height: 60px;
+        height: 4vw;
+        width: 30%;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 20px;
+    }
+
+    &__search {
+        box-sizing: border-box;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        width: 75%;
+        height: 50%;
+        padding: 4px 12px 4px 30px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+
+        @media screen and (min-width: 768px) {
+            font-size: 18px;
+        }
+
+        @media screen and (min-width: 851px) {
+            font-size: 18px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            left: 50%;
+            height: 40px;
+            width: 90%;
+            padding: 20px 12px 20px 50px;
+            font-size: 25px;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__loupe {
+        position: absolute;
+        top: 50%;
+        left: 6%;
+        transform: translateY(-50%);
+        color: rgb(131, 131, 175);
+
+        @media screen and (min-width: 1024px) {
+            left: 7%;
+            font-size: 25px;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+        height: 30px;
+        width: 50px;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: none;
+        outline: none;
+        color: #1A233B;
+        background-color: transparent;
+
+
+        @media screen and (orientation: landscape) {
+            right: 6%
+        }
+
+        @media screen and (min-width: 481px) {
+            right: 4%;
+            font-size: 30px;
+        }
+
+        @media screen and (min-width: 851px) {
+            right: 6%;
+            transform: translateY(-65%);
+            font-size: 40px;
+        }
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+}
+
+.invisible {
+    opacity: 0;
+
+    @media screen and (min-width: 1024px) {
+        opacity: 1;
+    }
+}
