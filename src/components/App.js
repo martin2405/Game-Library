@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Switch, NavLink} from 'react-router-dom'
+import {HashRouter as Router, Route, Switch, NavLink} from 'react-router-dom'
 import '../styles/App.scss';
 import Category from '../pages/Category';
 import TopBar from './TopBar'
