@@ -24,7 +24,6 @@ class App extends Component {
     actualGame: [],
     isOptionsVisible: false,
     isLoaded: false,
-    isNavActiveClass: '', 
     error: null
   }
 
@@ -85,15 +84,16 @@ class App extends Component {
     }))
   }
 
-  handleOptions = (type, game) => {
-    if(type === 'open') {
+  handleOptions = (game) => {
+    if(game) {
       this.setState(() => ({
         isOptionsVisible: true,
         actualGame: game
       }))
-    } else if (type === 'close') {
+    } else {
       this.setState(() => ({
         isOptionsVisible: false,
+        actualGame: []
       }))
     }
   }
@@ -101,12 +101,12 @@ class App extends Component {
   handleNav = () => {
     if (window.innerWidth < 1025) {
 
-      const classes = this.state.classesNav;
+      const classesNav = this.state.classesNav;
 
-      if (!classes.includes('active-nav')) {
-        classes.push('active-nav');
+      if (!classesNav.includes('active-nav')) {
+        classesNav.push('active-nav');
         this.setState(() => ({
-          classes,
+          classesNav,
         }))
       } else {
         this.setState(() => ({
@@ -116,7 +116,6 @@ class App extends Component {
       } 
     } else {
       this.setState(() => ({
-        isNavActiveClass: '',
         isOptionsVisible: false
       }))
   }
@@ -124,7 +123,7 @@ class App extends Component {
 
   render() {
     
-    const {isOptionsVisible, isLoaded, value, classesNav, games, actualGame, scrollDirection, isNavActiveClass, error} = this.state
+    const {isOptionsVisible, isLoaded, value, classesNav, games, actualGame, scrollDirection, error} = this.state
 
     const classNameNav = classesNav.join(' ');
     const isNavActive = Boolean(classesNav.includes('active-nav'));
@@ -149,7 +148,7 @@ class App extends Component {
 
       </main>
       <GameOptions isOptionsVisible={isOptionsVisible} actualGame={actualGame} closeOptions={this.handleOptions} isNavActive={isNavActive}/>
-      <nav className={`${classNameNav} ${isNavActiveClass}`} onMouseMove={this.handleMouseMove}>
+      <nav className={`${classNameNav}`}>
         <ul className='nav__ul'>
           {menu}
         </ul> 

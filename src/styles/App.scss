@@ -37,22 +37,19 @@ body {
 }
 
 .main::-webkit-scrollbar {
-    height: 700px;
     width: 10px;
 }
 
 .main::-webkit-scrollbar-track {
-    background: rgb(24, 9, 44);
-    border-radius: 20px;
+    background: rgba(0, 0, 0, 0);
 }
 
 .main::-webkit-scrollbar-thumb {
-    background: rgb(43, 62, 119);
-    border-radius: 20px;
+    background: rgba(0, 0, 0, 0);
 }
 
 .main::-webkit-scrollbar-thumb:hover {
-    background: rgb(50, 84, 185);
+    background: rgba(0, 0, 0, 0);
 }
 
 .game {

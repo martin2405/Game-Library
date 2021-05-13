@@ -78,13 +78,13 @@ class GameOptions extends Component {
                     {buttonsList}
                 </div>
                 <ul className={isOptionsVisible ? 'options__info active-info' : 'options__info'}>
-                <li className='options__info-describe'><span className='options__info-span'>Released</span> {actualGame.released}</li>
-                <li className='options__info-describe'><span className='options__info-span'>Rating</span> {actualGame.rating}/5.00</li>
-                <li className='options__info-describe'> <span className='options__info-span'>Playtime</span>{actualGame.playtime}h</li>
-                <li className='options__info-describe'> <span className='options__info-span'>Metacritic</span>{actualGame.metacritic ? `${actualGame.metacritic}/100` : '-'}</li>
-            </ul>
+                    <li className='options__info-describe'><span className='options__info-span'>Released</span> {actualGame.released}</li>
+                    <li className='options__info-describe'><span className='options__info-span'>Rating</span> {actualGame.rating}/5.00</li>
+                    <li className='options__info-describe'><span className='options__info-span'>Playtime</span>{actualGame.playtime}h</li>
+                    <li className='options__info-describe'><span className='options__info-span'>Metacritic</span>{actualGame.metacritic ? `${actualGame.metacritic}/100` : '-'}</li>
+                </ul>
             </main>
-            <button className='options__off-button' onClick={() => closeOptions('close')}><i className="fas fa-times"></i></button>
+            <button className='options__off-button' onClick={() => closeOptions()}><i className="fas fa-times"></i></button>
         </div>
     )
     }
