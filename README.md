@@ -1,5 +1,5 @@
 # Games Library 
 
-This app has over 500 titles. You can manage games in your own way. Check it live [here](http://gameslibrary.marcinrzodkiewicz.pl/#/)
+https://martin2405.github.io/Games-Library/
 
 ![photo of website](./src/img/game-library.png)
